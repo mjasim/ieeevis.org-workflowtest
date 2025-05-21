@@ -1,5 +1,5 @@
 PRODUCTION_BUCKET=ieeevis.org
-STAGING_BUCKET=staging.ieeevis.org
+STAGING_BUCKET=stagingflowtest.ieeevis.org
 NEW_BUCKET=redesign.ieeevis.org
 
 PRODUCTION_BRANCH=production
