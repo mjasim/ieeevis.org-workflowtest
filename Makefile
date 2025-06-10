@@ -3,7 +3,7 @@ STAGING_BUCKET=stagingflowtest.ieeevis.org
 NEW_BUCKET=redesign.ieeevis.org
 
 PRODUCTION_BRANCH=production
-STAGING_BRANCH=master
+STAGING_BRANCH=vis2025
 NEW_BRANCH=development
 2025_BRANCH=vis2025
 2025_RELEASE=vis2025-release
