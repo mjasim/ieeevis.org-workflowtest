@@ -10,13 +10,6 @@ on:
     # build staging whenever someone pushes to master (archive), previous year's (vis2019,
     # vis2020, vis2021, vis2022, vis2023, vis2024), or this year's site (vis2025)
     branches:
-      - master
-      - vis2019
-      - vis2020
-      - vis2021
-      - vis2022
-      - vis2023
-      - vis2024
       - vis2025
 
 jobs:
@@ -29,7 +22,7 @@ jobs:
     - name: Get all branches and checkout master
       run: |
         git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
-        git checkout master
+        git checkout vis2025
     - name: Set up Python 3.12.x
       uses: actions/setup-python@v1
       with:
@@ -56,39 +49,39 @@ jobs:
       ## SET IEEEVIS_AWS_USER environment variable to "default" in deploy step
 
     ## BUILD ARCHIVE YEARS (2018 and before)
-    - name: Build archive years
-      run: make site
+    # - name: Build archive years
+    #   run: make site
 
     ## BUILD PREVIOUS YEARS (currently: vis2019, vis2020, vis2021, vis2022)
-    - name: Build previous year (2019)
-      run: |
-        git switch -f vis2019
-        make new2019
+    # - name: Build previous year (2019)
+    #   run: |
+    #     git switch -f vis2019
+    #     make new2019
 
-    - name: Build previous year (2020)
-      run: |
-        git switch -f vis2020
-        make new2020
+    # - name: Build previous year (2020)
+    #   run: |
+    #     git switch -f vis2020
+    #     make new2020
 
-    - name: Build previous year (2021)
-      run: |
-        git switch -f vis2021
-        make new2021
+    # - name: Build previous year (2021)
+    #   run: |
+    #     git switch -f vis2021
+    #     make new2021
 
-    - name: Build previous year (2022)
-      run: |
-        git switch -f vis2022
-        make new2022
+    # - name: Build previous year (2022)
+    #   run: |
+    #     git switch -f vis2022
+    #     make new2022
 
-    - name: Build previous year (2023)
-      run: |
-        git switch -f vis2023
-        make new2023
+    # - name: Build previous year (2023)
+    #   run: |
+    #     git switch -f vis2023
+    #     make new2023
 
-    - name: Build previous year (2024)
-      run: |
-        git switch -f vis2024
-        make new2024
+    # - name: Build previous year (2024)
+    #   run: |
+    #     git switch -f vis2024
+    #     make new2024
 
     ## BUILD THIS YEAR (currently: vis2025)
     ## ./scripts/fix_file_extensions.sh moves some evergreen content from current year
