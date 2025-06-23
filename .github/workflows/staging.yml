@@ -10,6 +10,7 @@ on:
     # build staging whenever someone pushes to master (archive), previous year's (vis2019,
     # vis2020, vis2021, vis2022, vis2023, vis2024), or this year's site (vis2025)
     branches:
+      - vis2024
       - vis2025
 
 jobs:
@@ -78,10 +79,10 @@ jobs:
     #     git switch -f vis2023
     #     make new2023
 
-    # - name: Build previous year (2024)
-    #   run: |
-    #     git switch -f vis2024
-    #     make new2024
+    - name: Build previous year (2024)
+      run: |
+        git switch -f vis2024
+        make new2024
 
     ## BUILD THIS YEAR (currently: vis2025)
     ## ./scripts/fix_file_extensions.sh moves some evergreen content from current year
