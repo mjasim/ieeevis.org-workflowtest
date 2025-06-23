@@ -1,9 +1,9 @@
 PRODUCTION_BUCKET=ieeevis.org
-STAGING_BUCKET=staging.ieeevis.org
+STAGING_BUCKET=stagingflowtest.ieeevis.org
 NEW_BUCKET=redesign.ieeevis.org
 
 PRODUCTION_BRANCH=production
-STAGING_BRANCH=master
+STAGING_BRANCH=vis2024
 NEW_BRANCH=development
 2024_BRANCH=vis2024
 2024_RELEASE=vis2024-release
